@@ -22,7 +22,7 @@ public class Leetcode99 {
             setNums(root.left,nums);
         root.val=nums.get(0);
         nums.remove(0);
-        if (root.right!=null)r
+        if (root.right!=null)
             setNums(root.right,nums);
     }
     public void recoverTree(TreeNode root) {
