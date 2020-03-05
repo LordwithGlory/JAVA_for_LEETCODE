@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Leetcode126_c {
     Map<String, List<String>> fmap=new HashMap<String, List<String>>();
     Map<String, Integer> distance=new HashMap<String, Integer>();
-    public void bfs(String endword,List<String> content,List<String> wordlist){
+    public void bfs(String endword, List<String> content, Set<String> wordlist){
+        // 单单把list更换为set就可以过。。。
         distance.put(content.get(0),1);
         while (!content.isEmpty()){
             String former=content.remove(0);
@@ -73,7 +71,7 @@ public class Leetcode126_c {
             return res;
         }
         content.add(beginWord);
-        bfs(endWord,content,wordList);
+        bfs(endWord,content,new HashSet<>(wordList));
         content.clear();
         content.add(endWord);
         if (!distance.containsKey(endWord))
