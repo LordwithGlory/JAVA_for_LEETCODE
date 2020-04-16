@@ -35,7 +35,6 @@ public class Leetcode_weekly_5383 {
                         continue;
                     colors[colorpos]=Integer.toString(color_1)+Integer.toString(color_2)+Integer.toString(color_3);
                     colorpos++;
-                    in
                 }
             }
         }
