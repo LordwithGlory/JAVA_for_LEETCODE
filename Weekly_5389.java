@@ -89,7 +89,7 @@ public class Weekly_5389 {
         );
         List<String> dish_order=new ArrayList<>();
         for (List<String> order:orders){
-             bi
+//             bi
         }
         dish_order.sort(new Comparator<String>() {
             @Override
